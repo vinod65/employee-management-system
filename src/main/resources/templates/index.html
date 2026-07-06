@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Management System</title>
+
+    <link rel="stylesheet" th:href="@{/style.css}">
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<div class="navbar">
+
+    <div class="logo">
+        Employee Management System
+    </div>
+
+    <div class="menu">
+        <a th:href="@{/}">Home</a>
+        <a th:href="@{/add}">Add Employee</a>
+    </div>
+
+</div>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="heading">
+
+            <h2>Employee Dashboard</h2>
+
+            <a th:href="@{/add}" class="add-btn">
+                + Add Employee
+            </a>
+
+        </div>
+
+        <!-- Search -->
+
+        <input
+                type="text"
+                id="searchInput"
+                class="search-box"
+                placeholder="🔍 Search Employee..."
+                onkeyup="searchEmployee()">
+
+        <!-- Employee Table -->
+
+        <table id="employeeTable">
+
+            <thead>
+
+            <tr>
+
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Department</th>
+                <th>Salary</th>
+                <th>Actions</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody>
+
+            <tr th:each="employee : ${employees}">
+
+                <td th:text="${employee.id}"></td>
+
+                <td th:text="${employee.name}"></td>
+
+                <td th:text="${employee.email}"></td>
+
+                <td th:text="${employee.phone}"></td>
+
+                <td th:text="${employee.department}"></td>
+
+                <td>
+                    ₹ <span th:text="${employee.salary}"></span>
+                </td>
+
+                <td>
+
+                    <a th:href="@{/edit/{id}(id=${employee.id})}"
+                       class="edit-btn">
+                        Edit
+                    </a>
+
+                    &nbsp;
+
+                    <a th:href="@{/delete/{id}(id=${employee.id})}"
+                       class="delete-btn"
+                       onclick="return confirmDelete()">
+                        Delete
+                    </a>
+
+                </td>
+
+            </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script th:src="@{/script.js}"></script>
+
+</body>
+
+</html>
