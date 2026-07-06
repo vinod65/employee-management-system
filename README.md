@@ -113,7 +113,8 @@ MySQL Database
 
 ## 🏠 Home Page
 
-> Add your screenshot here
+> <img width="1895" height="748" alt="image" src="https://github.com/user-attachments/assets/585a75e8-9bb1-4bd3-9d14-20d98f1662b0" />
+
 
 ```
 screenshots/home.png
@@ -123,7 +124,8 @@ screenshots/home.png
 
 ## ➕ Add Employee
 
-> Add your screenshot here
+> <img width="1870" height="907" alt="image" src="https://github.com/user-attachments/assets/d1f583b8-489a-452b-ad50-737672194bc7" />
+
 
 ```
 screenshots/add.png
@@ -133,7 +135,9 @@ screenshots/add.png
 
 ## ✏️ Edit Employee
 
-> Add your screenshot here
+> <img width="1890" height="857" alt="image" src="https://github.com/user-attachments/assets/dbd3ca53-3399-4f25-9ff2-faf506de7a86" />![Uploading Screenshot 2026-07-06 110130.png…]()
+
+
 
 ```
 screenshots/edit.png
@@ -143,7 +147,8 @@ screenshots/edit.png
 
 ## ❌ Delete Employee
 
-> Add your screenshot here
+><img width="1901" height="826" alt="image" src="https://github.com/user-attachments/assets/c1e3bd1f-8451-4b26-9428-35041b5583d5" />
+
 
 ```
 screenshots/delete.png
