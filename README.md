@@ -113,7 +113,7 @@ MySQL Database
 
 ## 🏠 Home Page
 
-> <img width="1895" height="748" alt="image" src="https://github.com/user-attachments/assets/585a75e8-9bb1-4bd3-9d14-20d98f1662b0" />
+<img width="1918" height="896" alt="image" src="https://github.com/user-attachments/assets/08a08af8-907d-4c87-b7af-d6f34e52fb18" />
 
 
 ```
@@ -124,7 +124,8 @@ screenshots/home.png
 
 ## ➕ Add Employee
 
-> <img width="1870" height="907" alt="image" src="https://github.com/user-attachments/assets/d1f583b8-489a-452b-ad50-737672194bc7" />
+<img width="1162" height="763" alt="image" src="https://github.com/user-attachments/assets/73eaee27-2bb7-484a-a491-3a6bf4cf1e40" />
+
 
 
 ```
