@@ -1,1 +1,133 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" th:href="@{/style.css}">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        Employee Management System
+    </div>
+
+    <ul class="nav-links">
+
+        <li><a th:href="@{/}">Dashboard</a></li>
+
+        <li><a th:href="@{/employees}">Employees</a></li>
+
+        <li><a th:href="@{/add}">Add Employee</a></li>
+
+    </ul>
+
+</nav>
+
+<div class="container">
+
+    <div class="welcome">
+
+        <h1>👋 Welcome Back</h1>
+
+        <p>
+            Manage employee records efficiently using Spring Boot and MySQL.
+        </p>
+
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>Total Employees</h3>
+
+            <h1 th:text="${totalEmployees}">0</h1>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Departments</h3>
+
+            <h1 th:text="${totalDepartments}">0</h1>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Average Salary</h3>
+
+            <h1>
+                ₹ <span th:text="${averageSalary}">0</span>
+            </h1>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Quick Action</h3>
+
+            <a th:href="@{/add}" class="btn">
+
+                Add Employee
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="dashboard-buttons">
+
+        <a th:href="@{/employees}" class="btn">
+
+            View Employees
+
+        </a>
+
+        <a th:href="@{/add}" class="btn">
+
+            Add Employee
+
+        </a>
+
+    </div>
+
+    <div class="table-card" style="margin-top:40px;">
+
+        <h2>Recent Activity</h2>
+
+        <br>
+
+        <p>✔ Employee records are managed from the Employees page.</p>
+
+        <br>
+
+        <p>✔ Use <b>Add Employee</b> to create new employee records.</p>
+
+        <br>
+
+        <p>✔ Edit and Delete operations are available from the Employee List.</p>
+
+    </div>
+
+</div>
+
+<div class="footer">
+
+    © 2026 Employee Management System | Developed by Vinod T R
+
+</div>
+
+</body>
+
+</html>
