@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Employee Management System</title>
+    <title>Employees</title>
 
     <link rel="stylesheet" th:href="@{/style.css}">
 
@@ -14,45 +14,52 @@
 
 <body>
 
-<!-- Navbar -->
-
-<div class="navbar">
+<nav class="navbar">
 
     <div class="logo">
         Employee Management System
     </div>
 
-    <div class="menu">
-        <a th:href="@{/}">Home</a>
-        <a th:href="@{/add}">Add Employee</a>
-    </div>
+    <ul class="nav-links">
 
-</div>
+        <li><a th:href="@{/}">Dashboard</a></li>
+
+        <li><a th:href="@{/employees}" class="active">Employees</a></li>
+
+        <li><a th:href="@{/add}">Add Employee</a></li>
+
+    </ul>
+
+</nav>
 
 <div class="container">
 
-    <div class="card">
+    <div class="table-card">
 
         <div class="heading">
 
-            <h2>Employee Dashboard</h2>
+            <div>
 
-            <a th:href="@{/add}" class="add-btn">
+                <h2>Employee List</h2>
+
+                <p style="color:#64748b;margin-top:5px;">
+                    Manage all employee records
+                </p>
+
+            </div>
+
+            <a th:href="@{/add}" class="btn">
                 + Add Employee
             </a>
 
         </div>
 
-        <!-- Search -->
-
         <input
                 type="text"
                 id="searchInput"
                 class="search-box"
-                placeholder="🔍 Search Employee..."
+                placeholder="Search by Name, Email, Department..."
                 onkeyup="searchEmployee()">
-
-        <!-- Employee Table -->
 
         <table id="employeeTable">
 
@@ -84,25 +91,39 @@
 
                 <td th:text="${employee.phone}"></td>
 
-                <td th:text="${employee.department}"></td>
+                <td>
+                    <span style="
+                    background:#dbeafe;
+                    color:#1d4ed8;
+                    padding:6px 12px;
+                    border-radius:20px;
+                    font-size:13px;
+                    font-weight:600;"
+                          th:text="${employee.department}">
+                    </span>
+                </td>
 
                 <td>
+
                     ₹ <span th:text="${employee.salary}"></span>
+
                 </td>
 
                 <td>
 
                     <a th:href="@{/edit/{id}(id=${employee.id})}"
                        class="edit-btn">
-                        Edit
-                    </a>
 
-                    &nbsp;
+                        ✏ Edit
+
+                    </a>
 
                     <a th:href="@{/delete/{id}(id=${employee.id})}"
                        class="delete-btn"
                        onclick="return confirmDelete()">
-                        Delete
+
+                        🗑 Delete
+
                     </a>
 
                 </td>
@@ -114,6 +135,12 @@
         </table>
 
     </div>
+
+</div>
+
+<div class="footer">
+
+    © 2026 Employee Management System | Developed by Vinod T R
 
 </div>
 
