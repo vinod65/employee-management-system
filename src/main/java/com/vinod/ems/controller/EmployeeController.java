@@ -13,13 +13,30 @@ public class EmployeeController {
 
     @Autowired
     private EmployeeService employeeService;
-
     @GetMapping("/")
-    public String home(Model model) {
-        model.addAttribute("employees", employeeService.getAllEmployees());
-        return "index";
-    }
+    public String dashboard(Model model) {
 
+        model.addAttribute("totalEmployees",
+                employeeService.getAllEmployees().size());
+
+        model.addAttribute("totalDepartments", 5);
+
+        model.addAttribute("averageSalary",
+                employeeService.getAverageSalary());
+
+        return "dashboard";
+    
+    }
+    
+    @GetMapping("/employees")
+    public String employees(Model model){
+
+        model.addAttribute("employees",
+                employeeService.getAllEmployees());
+
+        return "employees";
+
+    }
     @GetMapping("/add")
     public String addEmployee(Model model) {
         model.addAttribute("employee", new EmployeEntity());
